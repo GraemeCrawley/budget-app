@@ -37,6 +37,17 @@ beforeEach(() => {
 });
 
 describe("Add", () => {
+  it("says in the demo that a picked file stays on the phone, and says nothing in the real app", async () => {
+    vi.stubEnv("VITE_MOCK", "1");
+    const demo = render(<Add />);
+    expect(await screen.findByText("Demo: your file stays on your phone and its contents are not read.")).toBeInTheDocument();
+    demo.unmount();
+    vi.unstubAllEnvs();
+    render(<Add />);
+    await screen.findByLabelText("Add files for any account");
+    expect(screen.queryByText(/^Demo:/)).toBeNull();
+  });
+
   it("lists each account with 'data through Jan 31' or 'nothing yet'", async () => {
     render(<Add />);
     expect(await screen.findByText("Data through Jan 31")).toBeInTheDocument();

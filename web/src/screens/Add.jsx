@@ -157,6 +157,9 @@ export default function Add() {
           <input type="file" multiple accept=".csv,.pdf,.txt" aria-label="Add files for any account" disabled={busy}
             onChange={pick(undefined)} />
         </label>
+        {import.meta.env.VITE_MOCK && (
+          <p className="note" role="note">Demo: your file stays on your phone and its contents are not read.</p>
+        )}
         <p className="small muted">Pick everything you downloaded, from any bank, all at once. Each file finds its
           own account, and a new account is made the first time its file arrives.</p>
         <NewAccount onCreated={created} />
