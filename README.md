@@ -8,7 +8,8 @@ money went. Nothing is sent to a third party and there is no bank login.
 |---|---|---|---|---|
 | ![Home](docs/screenshots/home.png) | ![Month](docs/screenshots/month-day-by-day.png) | ![Group](docs/screenshots/group.png) | ![Plan](docs/screenshots/plan.png) | ![Check](docs/screenshots/review.png) |
 
-The screenshots show the app's built-in sample data, not anyone's accounts.
+**[Live demo](https://apps.graemecrawley.com/demos/budget/)**: the whole app in your browser, running on
+invented data. The screenshots show the same sample data, not anyone's accounts.
 
 ## What it does
 
