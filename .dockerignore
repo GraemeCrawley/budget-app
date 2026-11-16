@@ -1,0 +1,19 @@
+# SECURITY: build context is the repo root, so exclude everything that must
+# never enter the image. private/ holds real transactions/balances; .git holds
+# history. A leak here would bake sensitive data into a distributable image.
+.git
+.gitignore
+private/
+docs/
+deploy/
+.claude/
+__pycache__/
+*.pyc
+web/node_modules/
+web/dist/
+**/__pycache__
+.superpowers/
+.worktrees/
+.playwright-mcp/
+.venv/
+tests/

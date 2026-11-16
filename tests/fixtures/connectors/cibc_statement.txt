@@ -1,0 +1,17 @@
+INVENTED CLIENT                                                                     For Feb 1 to Feb 28, 2026
+
+Account summary                                   
+Opening balance on Feb 1, 2026                                          $1,000.00
+Closing balance on Feb 28, 2026
+
+Transaction details
+Date         Description                                 Withdrawals ($)Deposits ($)                        Balance ($)
+Feb 1        Opening balance                                                                                 $1,000.00
+Feb 3        INVENTED GROCER                                  40.00                                             960.00
+Feb 3        INVENTED GROCER                                  40.00                                             920.00
+Feb 14       PAY INVENTED EMPLOYER                                        2,000.00                            2,920.00
+             REF 0001
+Feb 20       INTERNET TRANSFER 000000000001                  500.00                                           2,420.00
+             Closing balance                                                                                $2,420.00
+
+Page 1 of 1

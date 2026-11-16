@@ -1,0 +1,6 @@
+{
+  "team_domain": "your-team.cloudflareaccess.com",
+  "aud": "the-application-audience-tag",
+  "users": { "you@example.com": "owner" },
+  "mode": "report"
+}

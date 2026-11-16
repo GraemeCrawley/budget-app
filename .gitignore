@@ -1,0 +1,16 @@
+# Real financial figures: transactions, balances, account exports, CSVs.
+# This is the most sensitive data on the stack. NEVER commit.
+/private/
+
+
+
+# Local scratch and caches
+.superpowers/
+__pycache__/
+
+# Client build and dependencies
+web/node_modules/
+web/dist/
+
+# Your ledger, statements and login settings
+/data/

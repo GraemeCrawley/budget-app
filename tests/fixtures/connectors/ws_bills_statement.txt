@@ -1,0 +1,22 @@
+                                                                                         Chequing monthly statement
+Wealthsimple                                                                                    Mar 1 - Mar 31, 2026
+
+ Sample Person
+ 1 Example Street
+ Exampletown, ON A1A1A1
+ Canada
+
+ Account number: 00000000
+
+       Your March summary                                    MAR 1 BALANCE           MAR 31 BALANCE
+
+                                                             $50.00                  $170.15
+
+Activity
+DATE                   POSTED DATE             DESCRIPTION                                   AMOUNT (CAD)            BALANCE (CAD)
+
+2026-03-01             2026-03-01              Deposit from Example Source                          $200.00                 $250.00
+2026-03-10             2026-03-10              Bill payment to Example Utility                     –$80.00                 $170.00
+2026-03-31             2026-03-31              Interest earned                                        $0.15                 $170.15
+
+Wealthsimple Example Page 1 of 1

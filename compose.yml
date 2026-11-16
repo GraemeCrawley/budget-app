@@ -1,0 +1,15 @@
+# A standalone example. It listens on this machine only (127.0.0.1): the app has no login of its
+# own, so do not expose it to a network without putting a login in front of it (see the README).
+services:
+  budget:
+    build: .
+    container_name: budget
+    environment:
+      TZ: America/Toronto          # your time zone: decides what "today" and "last month" mean
+      GB_DATA_DIR: /data           # the ledger and the login settings live here
+      GB_SITE_URL: http://localhost:8000/   # the address you open the app at, ending in a slash
+    volumes:
+      - ./data:/data               # your statements and ledger stay in this folder, outside the image
+    ports:
+      - "127.0.0.1:8000:8000"
+    restart: unless-stopped

@@ -1,0 +1,17 @@
+Prepared For                                                                                  Account Number               Opening Date              Closing Date
+INVENTED PERSON                                                              XXXX XXXXXX X0000                        Jan 4, 2026             Feb 3, 2026
+ACCOUNT SUMMARY
+       Previous Balance                                      $300.00 Credit Limit                                                               $5,000.00
+Equals New Balance                                           $180.50
+
+Your Transactions
+Transaction   Posting
+Date          Date      Details                                                                                      Amount ($)
+
+Jan 10        Jan 11    INVENTED CAFE TORONTO                                                                           60.25
+                        INVENTED REFERENCE 0000
+Jan 15        Jan 16    PAYMENT RECEIVED - THANK YOU                                                                  -300.00
+Feb 1         Feb 2     INVENTED STORE                                                                                 120.25
+
+Total of Account Activity                                                                                            180.50
+Feb 2         Feb 3     LATER LINE THAT MUST BE IGNORED                                                                  9.99

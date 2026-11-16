@@ -1,0 +1,14 @@
+Prepared For                                                                                  Account Number               Opening Date              Closing Date
+INVENTED PERSON                                                              XXXX XXXXXX X0000                        Dec 4, 2025             Jan 3, 2026
+ACCOUNT SUMMARY
+       Previous Balance                                      $0.00 Credit Limit                                                                 $5,000.00
+Equals New Balance                                           $30.00
+
+Your Transactions
+Transaction   Posting
+Date          Date      Details                                                                                      Amount ($)
+
+Dec 20        Dec 21    INVENTED SHOP                                                                                   10.00
+Jan 2         Jan 3     INVENTED SERVICE                                                                                20.00
+
+Total of Account Activity                                                                                             30.00

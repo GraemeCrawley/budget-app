@@ -1,0 +1,14 @@
+INVENTED CLIENT                                                                     For Dec 15 to Jan 14, 2026
+
+Account summary                                   
+Opening balance on Dec 15, 2025                                         $100.00
+Closing balance on Jan 14, 2026
+
+Transaction details
+Date         Description                                 Withdrawals ($)Deposits ($)                        Balance ($)
+Dec 15       Opening balance                                                                                   $100.00
+Dec 30       INVENTED PAYEE                                   10.00                                              90.00
+Jan 2        INVENTED REFUND                                                  5.00                               95.00
+             Closing balance                                                                                $95.00
+
+Page 1 of 1

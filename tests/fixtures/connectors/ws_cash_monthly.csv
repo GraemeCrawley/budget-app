@@ -1,0 +1,4 @@
+"date","transaction","description","amount","balance","currency"
+"2026-01-02","DEP","Invented payroll deposit","25.00","125.00","CAD"
+"2026-01-15","SPEND","Invented corner shop","-10.50","114.50","CAD"
+"2026-01-28","INT","Invented interest","0.42","114.92","CAD"
