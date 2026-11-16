@@ -2,6 +2,7 @@
 // figure beside it; whether anything is waiting; and what moved against the month before, as
 // figures rather than sentences. Nothing here depends on a chosen month.
 import { get } from "../api.js";
+import BudgetWatch from "../components/BudgetWatch.jsx";
 import Loading from "../components/Loading.jsx";
 import MoneyChart from "../components/MoneyChart.jsx";
 import Problem from "../components/Problem.jsx";
@@ -99,6 +100,8 @@ export default function Home() {
           ? <a className="btn" href="#/review">{plural(toLookCount, "charge")} to check</a>
           : <p className="muted">Nothing. Every charge is checked.</p>}
       </section>
+
+      <BudgetWatch months={months} />
 
       {before && (
         <section className="panel" role="region" aria-label="What changed">

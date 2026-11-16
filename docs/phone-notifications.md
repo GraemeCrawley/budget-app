@@ -24,11 +24,17 @@ behind Cloudflare Access. The throwaway test code is not kept; the build describ
 | Did the notification's id reach the service worker in the declarative form? | **No**, not where the test put it (`notification.data.id`). The production worker now looks in several places (section 4). |
 | Does a browser tab (not home screen) work on an iPhone? | No. Push only exists once the app is added to the home screen and opened from there. |
 
-**Not yet proven** (as of writing; update this section when it is):
-- The production build in this app (sections 2 to 5) has passed its automated tests and is
-  deployed, but the user has not yet turned it on and tapped a test on the phone.
-- Whether the production worker finds the id in a declarative message, so "arrived" is recorded.
-  "Opened" does not depend on it.
+**Proven with the production build** (2026-11-16, same iPhone, declarative form, sent from the app's
+Settings screen):
+- Turning reminders on from the home-screen app, then "Send a test": the notification arrived.
+- "Arrived" was recorded: the production service worker found the notification's id in the
+  declarative message and reported it (2 of 2 tests).
+- "Opened" was recorded from the opened page when the notification was tapped (1 of 1 tapped; the
+  second test was left untapped and correctly shows as arrived, not opened).
+
+**Not yet proven:**
+- A scheduled reminder sent while the app is closed and the phone has been idle for days (the
+  tests above were sent while the app was in use).
 - Whether removing and re-adding the home-screen icon drops the phone's subscription. Assume it
   does, and have the app show whether this phone is subscribed.
 - Android and desktop browsers. The code allows their push services but none was tested.
