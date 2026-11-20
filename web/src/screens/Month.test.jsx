@@ -132,6 +132,7 @@ describe("Month", () => {
     const big = within(await screen.findByRole("region", { name: "Biggest charges" }));
     expect(big.getAllByRole("button")).toHaveLength(1);
     expect(big.getByText("-$1,800.00")).toBeInTheDocument();
+    expect(big.getByRole("link", { name: "See the 1 charge" })).toHaveAttribute("href", "#/charges/2026-01");
   });
 
   it("notes a one-off charge under the big number", async () => {

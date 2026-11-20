@@ -19,6 +19,7 @@ export function parse(hash) {
   if (head === "charge" && parts.length === 2) return { name: "charge", params: { id: a } };
   if (head === "add" && parts.length === 1) return { name: "add", params: {} };
   if (head === "review" && parts.length === 1) return { name: "review", params: {} }; // every month at once
+  if (head === "charges" && parts.length === 2 && YM.test(a)) return { name: "charges", params: { ym: a } };
   if (head === "plan" && parts.length === 1) return { name: "plan", params: {} };
   if (head === "settings" && parts.length === 1) return { name: "settings", params: {} };
   if (head === "review" && parts.length === 2 && YM.test(a)) return { name: "review", params: { ym: a } };

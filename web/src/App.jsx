@@ -5,6 +5,7 @@ import { useRoute } from "./router.js";
 import Add from "./screens/Add.jsx";
 import Block from "./screens/Block.jsx";
 import Charge from "./screens/Charge.jsx";
+import Charges from "./screens/Charges.jsx";
 import Home from "./screens/Home.jsx";
 import Month from "./screens/Month.jsx";
 import Months from "./screens/Months.jsx";
@@ -35,6 +36,7 @@ export default function App() {
   else if (route.name === "block") screen = <Block key={key} ym={route.params.ym} block={route.params.block} />;
   else if (route.name === "charge") screen = <Charge key={key} id={route.params.id} />;
   else if (route.name === "add") screen = <Add key={key} />;
+  else if (route.name === "charges") screen = <Charges key={key} ym={route.params.ym} />;
   else if (route.name === "plan") screen = <Plan key={key} />;
   else if (route.name === "review") screen = <Review key={key} ym={route.params.ym} />;
   else if (route.name === "settings") screen = <Settings key={key} prefs={prefs} setPref={setPref} />;

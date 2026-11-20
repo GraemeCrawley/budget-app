@@ -2,7 +2,7 @@
 import { versionWords } from "../version.js";
 
 const HOME = { label: "Home", href: "#/", names: ["home"] };
-const MONTHS = { label: "Months", href: "#/months", names: ["months", "month", "block", "charge"] };
+const MONTHS = { label: "Months", href: "#/months", names: ["months", "month", "block", "charge", "charges"] };
 const PLAN = { label: "Plan", href: "#/plan", names: ["plan"] };
 const ADD = { label: "Add", href: "#/add", names: ["add"] };
 
