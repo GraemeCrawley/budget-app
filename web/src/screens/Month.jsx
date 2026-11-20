@@ -7,7 +7,7 @@ import Loading from "../components/Loading.jsx";
 import Problem from "../components/Problem.jsx";
 import UsualBar from "../components/UsualBar.jsx";
 import DailyChart from "../components/DailyChart.jsx";
-import { dollars, monthName, percent, shortDate } from "../money.js";
+import { dollars, monthName, monthOnly, percent, shortDate } from "../money.js";
 import { againstUsual } from "../overview.js";
 import useLoad from "../useLoad.js";
 
@@ -116,6 +116,8 @@ export default function Month({ ym }) {
         <div><span className="small muted">Spending</span><span className="figure num">{dollars(m.spending_cents)}</span></div>
         <div className="kept"><span className="small">Saved</span><span className="figure num">{dollars(m.income_cents - m.spending_cents)}</span></div>
       </section>
+
+      <a className="btn ghost" href={`#/charges/${m.month}`}>All purchases in {monthOnly(m.month)}</a>
 
       <DailyChart ym={m.month} before={prev} through={m.complete ? null : earliest} />
 

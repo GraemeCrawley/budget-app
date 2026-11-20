@@ -24,11 +24,13 @@ beforeEach(() => {
   location.hash = "#/";
 });
 
-describe("All charges in a month", () => {
-  it("lists every spending charge newest first, with a count and total, and a way back", async () => {
+describe("All purchases in a month", () => {
+  it("lists every purchase in date order from the 1st, with a count and total, and a way back", async () => {
     render(<Charges ym="2026-02" />);
     expect(await screen.findByText("3 charges, spending $100")).toBeInTheDocument();
     expect(get).toHaveBeenCalledWith("transactions?month=2026-02");
+    expect(names()).toEqual(["CORNER CAFE", "GREEN GROCER", "BAKERY ONE"]);
+    await userEvent.click(screen.getByRole("button", { name: "Newest first" }));
     expect(names()).toEqual(["BAKERY ONE", "GREEN GROCER", "CORNER CAFE"]);
     expect(screen.getByRole("link", { name: /February 2026/ })).toHaveAttribute("href", "#/month/2026-02");
   });
@@ -48,7 +50,7 @@ describe("All charges in a month", () => {
     expect(names()).toEqual(["GREEN GROCER"]);
     await userEvent.clear(box);
     await userEvent.type(box, "coffee");
-    expect(names()).toEqual(["BAKERY ONE", "CORNER CAFE"]);
+    expect(names()).toEqual(["CORNER CAFE", "BAKERY ONE"]);
     await userEvent.type(box, "zzz");
     expect(screen.getByText("Nothing matches.")).toBeInTheDocument();
   });

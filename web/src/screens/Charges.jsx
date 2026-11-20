@@ -1,5 +1,6 @@
-// Every charge in one month. Spending by default; "Everything" adds income, savings and money
-// moved between accounts. Newest first or biggest first, and a box to narrow by shop or category.
+// Every purchase in one month, in date order from the 1st. Spending by default; "Everything" adds
+// income, savings and money moved between accounts. Can be turned newest first or biggest first,
+// and a box narrows by shop or category.
 import { useState } from "react";
 import { monthCharges } from "../charges.js";
 import ChargeRow from "../components/ChargeRow.jsx";
@@ -26,7 +27,7 @@ function Pick({ label, value, options, onPick }) {
 export default function Charges({ ym }) {
   const { data, error, retry } = useLoad(() => monthCharges(ym), [ym]);
   const [show, setShow] = useState("spending");
-  const [order, setOrder] = useState("newest");
+  const [order, setOrder] = useState("oldest"); // the month as it happened, from the 1st
   const [words, setWords] = useState("");
 
   if (error) return <Problem error={error} onRetry={retry} />;
@@ -37,17 +38,17 @@ export default function Charges({ ym }) {
     .filter((c) => show === "everything" || isSpending(c))
     .filter((c) => !wanted || [c.merchant, c.description, c.category, c.account_name]
       .some((text) => (text || "").toLowerCase().includes(wanted)))
-    .sort(order === "biggest" ? biggest : newest);
+    .sort(order === "biggest" ? biggest : order === "newest" ? newest : (a, b) => newest(b, a));
   const spent = -listed.filter(isSpending).reduce((n, c) => n + c.amount_cents, 0);
 
   return (
     <div className="screen">
       <a className="back" href={`#/month/${ym}`}>‹ {monthName(ym)}</a>
       <section className="panel">
-        <h1>All charges</h1>
+        <h1>All purchases</h1>
         <span className="small muted">{monthName(ym)}</span>
         <Pick label="Show" value={show} onPick={setShow} options={[["spending", "Spending"], ["everything", "Everything"]]} />
-        <Pick label="Order" value={order} onPick={setOrder} options={[["newest", "Newest first"], ["biggest", "Biggest first"]]} />
+        <Pick label="Order" value={order} onPick={setOrder} options={[["oldest", "In date order"], ["newest", "Newest first"], ["biggest", "Biggest first"]]} />
         <label className="budget-edit">
           <span className="small muted">Narrow by shop, category or account</span>
           <input type="search" value={words} onChange={(e) => setWords(e.target.value)} />
